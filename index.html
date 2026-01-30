@@ -12,13 +12,13 @@
             padding: 0;
             background-color: #141414;
             color: white;
-            background-image: url('/mnt/data/curtain.jpg'); /* Background image */
+            background-image: url('/mnt/data/curtain.jpg'); 
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
         header {
-            background-color: rgba(229, 9, 20, 0.9); /* Slight transparency to make text readable */
+            background-color: rgba(229, 9, 20, 0.9); 
             color: white;
             text-align: center;
             padding: 15px;
@@ -46,7 +46,7 @@
             margin: 0 20px;
         }
         .movie {
-            background-color: rgba(51, 51, 51, 0.8); /* Slight transparency for the movie div */
+            background-color: rgba(51, 51, 51, 0.8); 
             margin: 10px;
             padding: 15px;
             border-radius: 8px;
@@ -114,11 +114,9 @@
 </div>
 
 <div class="movie-list" id="movie-list">
-    <!-- Movies will be dynamically inserted here -->
 </div>
 
 <script>
-    // Sample movie data with images from the uploaded file and added new movies
     const movies = [
         { title: 'Avengers: Endgame', genre: 'Action', year: '2019', description: 'The Avengers assemble to take down Thanos once and for all.', releaseDate: '2019-04-26', image: 'avengers.jpg' },
         { title: 'The Irishman', genre: 'Drama', year: '2019', description: 'A mob hitman recalls his possible involvement with the slaying of Jimmy Hoffa.', releaseDate: '2019-11-27', image: 'irishman.jpg' },
@@ -128,7 +126,6 @@
         { title: 'Toy Story 4', genre: 'Animation', year: '2019', description: 'Woody and Buzz Lightyear set out on an adventure to find Bonnie’s toy, Forky, and learn important lessons about friendship and loyalty.', releaseDate: '2019-06-21', image: 'toystory4.jpg' },
         { title: 'Inception', genre: 'Science Fiction', year: '2010', description: 'A skilled thief is given a chance to have his criminal record erased if he can successfully perform inception on a target\'s mind.', releaseDate: '2010-07-16', image: 'inception.jpg' },
         
-        // New movies added
         { title: 'The Dark Knight', genre: 'Action', year: '2008', description: 'Batman faces the Joker, a criminal mastermind who wants to plunge Gotham City into anarchy.', releaseDate: '2008-07-18', image: 'darkknight.jpg' },
         { title: 'Interstellar', genre: 'Science Fiction', year: '2014', description: 'A team of explorers travel through a wormhole in space in an attempt to ensure humanity\'s survival.', releaseDate: '2014-11-07', image: 'interstellar.jpg' },
         { title: 'The Matrix', genre: 'Science Fiction', year: '1999', description: 'A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.', releaseDate: '1999-03-31', image: 'matrix.jpg' },
@@ -136,10 +133,9 @@
         { title: 'Shawshank Redemption', genre: 'Drama', year: '1994', description: 'Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.', releaseDate: '1994-09-23', image: 'shawshank.jpg' }
     ];
 
-    // Function to display movies on the page
     function displayMovies(filteredMovies) {
         const movieListContainer = document.getElementById('movie-list');
-        movieListContainer.innerHTML = ''; // Clear previous movies
+        movieListContainer.innerHTML = ''; 
 
         filteredMovies.forEach(movie => {
             const movieDiv = document.createElement('div');
@@ -154,7 +150,6 @@
         });
     }
 
-    // Function to filter movies based on search and selected filters
     function filterMovies() {
         const searchQuery = document.getElementById('search-bar').value.toLowerCase();
         const selectedGenre = document.getElementById('genre-filter').value;
@@ -168,12 +163,12 @@
             return matchesSearch && matchesGenre && matchesYear;
         });
 
-        displayMovies(filteredMovies); // Display filtered movies
+        displayMovies(filteredMovies); 
     }
 
-    // Display all movies when the page loads
     displayMovies(movies);
 </script>
 
 </body>
 </html>
+
