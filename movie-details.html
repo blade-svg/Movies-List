@@ -60,11 +60,9 @@
 </header>
 
 <div class="movie-details" id="movie-details">
-    <!-- Movie details will be dynamically inserted here -->
 </div>
 
 <script>
-    // Sample movie data with images from the uploaded file and added new movies
     const movies = [
         { title: 'Avengers: Endgame', genre: 'Action', year: '2019', description: 'The Avengers assemble to take down Thanos once and for all.', releaseDate: '2019-04-26', image: 'avengers.jpg', trailer: 'https://www.youtube.com/watch?v=TcMBFSGVi1c', cast: 'Robert Downey Jr., Chris Evans, Mark Ruffalo', director: 'Anthony Russo, Joe Russo' },
         { title: 'The Irishman', genre: 'Drama', year: '2019', description: 'A mob hitman recalls his possible involvement with the slaying of Jimmy Hoffa.', releaseDate: '2019-11-27', image: 'irishman.jpg', trailer: 'https://www.youtube.com/watch?v=9Z09I5pXgoE', cast: 'Robert De Niro, Al Pacino, Joe Pesci', director: 'Martin Scorsese' },
@@ -73,8 +71,6 @@
         { title: 'The Lion King', genre: 'Animation', year: '2019', description: 'A young lion prince flees his kingdom only to learn the true meaning of responsibility and bravery.', releaseDate: '2019-07-19', image: 'lionking.jpg', trailer: 'https://www.youtube.com/watch?v=7TavVZMf1a8', cast: 'Donald Glover, Beyoncé, James Earl Jones', director: 'Jon Favreau' },
         { title: 'Toy Story 4', genre: 'Animation', year: '2019', description: 'Woody and Buzz Lightyear set out on an adventure to find Bonnie’s toy, Forky, and learn important lessons about friendship and loyalty.', releaseDate: '2019-06-21', image: 'toystory4.jpg', trailer: 'https://www.youtube.com/watch?v=wMiJfbxkVt8', cast: 'Tom Hanks, Tim Allen, Annie Potts', director: 'Josh Cooley' },
         { title: 'Inception', genre: 'Science Fiction', year: '2010', description: 'A skilled thief is given a chance to have his criminal record erased if he can successfully perform inception on a target\'s mind.', releaseDate: '2010-07-16', image: 'inception.jpg', trailer: 'https://www.youtube.com/watch?v=YoHD9XEInc0', cast: 'Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page', director: 'Christopher Nolan' },
-
-        // New movies added
         { title: 'The Dark Knight', genre: 'Action', year: '2008', description: 'Batman faces the Joker, a criminal mastermind who wants to plunge Gotham City into anarchy.', releaseDate: '2008-07-18', image: 'darkknight.jpg', trailer: 'https://www.youtube.com/watch?v=EXeTwQWrcwY', cast: 'Christian Bale, Heath Ledger, Aaron Eckhart', director: 'Christopher Nolan' },
         { title: 'Interstellar', genre: 'Science Fiction', year: '2014', description: 'A team of explorers travel through a wormhole in space in an attempt to ensure humanity\'s survival.', releaseDate: '2014-11-07', image: 'interstellar.jpg', trailer: 'https://www.youtube.com/watch?v=zSWdZVtXT7E', cast: 'Matthew McConaughey, Anne Hathaway, Jessica Chastain', director: 'Christopher Nolan' },
         { title: 'The Matrix', genre: 'Science Fiction', year: '1999', description: 'A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.', releaseDate: '1999-03-31', image: 'matrix.jpg', trailer: 'https://www.youtube.com/watch?v=vKQi3bBA1y8', cast: 'Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss', director: 'The Wachowskis' },
@@ -82,17 +78,14 @@
         { title: 'Shawshank Redemption', genre: 'Drama', year: '1994', description: 'Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.', releaseDate: '1994-09-23', image: 'shawshank.jpg', trailer: 'https://www.youtube.com/watch?v=6hB3S9bIaco', cast: 'Tim Robbins, Morgan Freeman, Bob Gunton', director: 'Frank Darabont' }
     ];
 
-    // Function to get the query parameter from URL
     function getQueryParam(param) {
         const urlParams = new URLSearchParams(window.location.search);
         return urlParams.get(param);
     }
 
-    // Function to display movie details based on the title from the URL
     function displayMovieDetails() {
-        const movieTitle = getQueryParam('title'); // Get the movie title from the URL
-        const movie = movies.find(m => m.title === movieTitle); // Find the movie by title
-
+        const movieTitle = getQueryParam('title'); 
+        const movie = movies.find(m => m.title === movieTitle); 
         if (movie) {
             const movieDetailsContainer = document.getElementById('movie-details');
             movieDetailsContainer.innerHTML = `
@@ -110,9 +103,9 @@
         }
     }
 
-    // Display the movie details when the page loads
     displayMovieDetails();
 </script>
 
 </body>
 </html>
+
